@@ -1,186 +1,170 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/java/features/Login.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("Login.feature");
 formatter.feature({
+  "line": 1,
   "name": "LoginFeature",
-  "description": "  This feature deals with the login functionality of the application",
+  "description": "This feature deals with the login functionality of the application",
+  "id": "loginfeature",
   "keyword": "Feature"
 });
+formatter.before({
+  "duration": 9656346811,
+  "status": "passed"
+});
 formatter.scenario({
+  "line": 4,
   "name": "Login with correct username and password",
   "description": "",
+  "id": "loginfeature;login-with-correct-username-and-password",
+  "type": "scenario",
   "keyword": "Scenario"
 });
-formatter.before({
-  "status": "passed"
-});
-formatter.beforestep({
-  "status": "passed"
-});
 formatter.step({
+  "line": 5,
   "name": "I navigate to the login page",
   "keyword": "Given "
 });
-formatter.match({
-  "location": "LoginStep.iNavigateToTheLoginPage()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.afterstep({
-  "status": "passed"
-});
-formatter.beforestep({
-  "status": "passed"
-});
 formatter.step({
+  "line": 6,
   "name": "I enter the following for Login",
   "rows": [
     {
       "cells": [
         "username",
         "password"
-      ]
+      ],
+      "line": 7
     },
     {
       "cells": [
         "admin",
         "adminpassword"
-      ]
+      ],
+      "line": 8
     }
   ],
   "keyword": "And "
+});
+formatter.step({
+  "line": 9,
+  "name": "I click login button",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 10,
+  "name": "I should see the userform page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "LoginStep.iNavigateToTheLoginPage()"
+});
+formatter.result({
+  "duration": 2440320911,
+  "status": "passed"
 });
 formatter.match({
   "location": "LoginStep.iEnterTheFollowingForLogin(DataTable)"
 });
 formatter.result({
+  "duration": 1017561176,
   "status": "passed"
-});
-formatter.afterstep({
-  "status": "passed"
-});
-formatter.beforestep({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I click login button",
-  "keyword": "And "
 });
 formatter.match({
   "location": "LoginStep.iClickLoginButton()"
 });
 formatter.result({
-  "error_message": "org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document\n  (Session info: chrome\u003d76.0.3809.132)\n  (Driver info: chromedriver\u003d2.40.565386 (45a059dc425e08165f9a10324bd1380cc13ca363),platform\u003dMac OS X 10.14.6 x86_64) (WARNING: The server did not provide any stacktrace information)\nCommand duration or timeout: 0 milliseconds\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027karthiks-MBP\u0027, ip: \u0027fe80:0:0:0:1cb1:e0a8:72dd:7cee%en0\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.14.6\u0027, java.version: \u002710.0.1\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.40.565386 (45a059dc425e08..., userDataDir: /var/folders/qc/v5bq615178s...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 76.0.3809.132, webStorageEnabled: true}\nSession ID: 7a9e8229dc82717f9f0567c3a356468d\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:488)\n\tat org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)\n\tat org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)\n\tat org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)\n\tat org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)\n\tat org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\n\tat org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)\n\tat org.openqa.selenium.remote.RemoteWebElement.submit(RemoteWebElement.java:88)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:564)\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)\n\tat com.sun.proxy.$Proxy23.submit(Unknown Source)\n\tat pages.LoginPage.ClickLogin(LoginPage.java:35)\n\tat steps.LoginStep.iClickLoginButton(LoginStep.java:46)\n\tat ✽.I click login button(file:src/test/java/features/Login.feature:9)\n",
-  "status": "failed"
-});
-formatter.afterstep({
+  "duration": 636928762,
   "status": "passed"
-});
-formatter.beforestep({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "I should see the userform page",
-  "keyword": "Then "
 });
 formatter.match({
   "location": "LoginStep.iShouldSeeTheUserformPage()"
 });
 formatter.result({
-  "status": "skipped"
-});
-formatter.afterstep({
-  "status": "skipped"
+  "duration": 85711658,
+  "status": "passed"
 });
 formatter.after({
+  "duration": 156094,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 8759250579,
   "status": "passed"
 });
 formatter.scenario({
+  "line": 12,
   "name": "Login with correct username and password to fail",
   "description": "",
+  "id": "loginfeature;login-with-correct-username-and-password-to-fail",
+  "type": "scenario",
   "keyword": "Scenario"
 });
-formatter.before({
-  "status": "passed"
-});
-formatter.beforestep({
-  "status": "passed"
-});
 formatter.step({
+  "line": 13,
   "name": "I navigate to the login page",
   "keyword": "Given "
 });
-formatter.match({
-  "location": "LoginStep.iNavigateToTheLoginPage()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.afterstep({
-  "status": "passed"
-});
-formatter.beforestep({
-  "status": "passed"
-});
 formatter.step({
+  "line": 14,
   "name": "I enter the following for Login",
   "rows": [
     {
       "cells": [
         "username",
         "password"
-      ]
+      ],
+      "line": 15
     },
     {
       "cells": [
         "admin",
         "adminpassword"
-      ]
+      ],
+      "line": 16
     }
   ],
   "keyword": "And "
+});
+formatter.step({
+  "line": 17,
+  "name": "I click login button",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 18,
+  "name": "I should see the userform page wrongly",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "LoginStep.iNavigateToTheLoginPage()"
+});
+formatter.result({
+  "duration": 2067637298,
+  "status": "passed"
 });
 formatter.match({
   "location": "LoginStep.iEnterTheFollowingForLogin(DataTable)"
 });
 formatter.result({
+  "duration": 1026598356,
   "status": "passed"
-});
-formatter.afterstep({
-  "status": "passed"
-});
-formatter.beforestep({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I click login button",
-  "keyword": "And "
 });
 formatter.match({
   "location": "LoginStep.iClickLoginButton()"
 });
 formatter.result({
+  "duration": 566324828,
   "status": "passed"
-});
-formatter.afterstep({
-  "status": "passed"
-});
-formatter.beforestep({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I should see the userform page wrongly",
-  "keyword": "Then "
 });
 formatter.match({
   "location": "LoginStep.iShouldSeeTheUserformPageWrongly()"
 });
 formatter.result({
-  "status": "passed"
-});
-formatter.afterstep({
-  "status": "passed"
+  "duration": 198883824,
+  "error_message": "org.openqa.selenium.NoSuchElementException: Unable to locate element: {\"method\":\"id\",\"selector\":\"sdfgdsfsd\"}\nCommand duration or timeout: 188 milliseconds\nFor documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.0.1\u0027, revision: \u00271969d75\u0027, time: \u00272016-10-18 09:49:13 -0700\u0027\nSystem info: host: \u0027DESKTOP-6H7284L\u0027, ip: \u002710.0.75.1\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_77\u0027\nDriver info: org.openqa.selenium.firefox.FirefoxDriver\nCapabilities [{applicationCacheEnabled\u003dtrue, rotatable\u003dfalse, handlesAlerts\u003dtrue, databaseEnabled\u003dtrue, version\u003d47.0.1, platform\u003dWINDOWS, nativeEvents\u003dfalse, acceptSslCerts\u003dtrue, webStorageEnabled\u003dtrue, locationContextEnabled\u003dtrue, browserName\u003dfirefox, takesScreenshot\u003dtrue, javascriptEnabled\u003dtrue, cssSelectorsEnabled\u003dtrue}]\nSession ID: 2a4d2ff9-76b7-4c52-b705-9689b74cda51\n*** Element info: {Using\u003did, value\u003dsdfgdsfsd}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)\r\n\tat org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:417)\r\n\tat org.openqa.selenium.By$ById.findElement(By.java:218)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)\r\n\tat steps.LoginStep.iShouldSeeTheUserformPageWrongly(LoginStep.java:71)\r\n\tat ✽.Then I should see the userform page wrongly(Login.feature:18)\r\nCaused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {\"method\":\"id\",\"selector\":\"sdfgdsfsd\"}\nFor documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.0.1\u0027, revision: \u00271969d75\u0027, time: \u00272016-10-18 09:49:13 -0700\u0027\nSystem info: host: \u0027DESKTOP-6H7284L\u0027, ip: \u002710.0.75.1\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_77\u0027\nDriver info: driver.version: unknown\r\n\tat \u003canonymous class\u003e.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/Karthik/AppData/Local/Temp/anonymous4377442462210879300webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:11187)\r\n\tat \u003canonymous class\u003e.FirefoxDriver.prototype.findElement(file:///C:/Users/Karthik/AppData/Local/Temp/anonymous4377442462210879300webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:11196)\r\n\tat \u003canonymous class\u003e.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/Karthik/AppData/Local/Temp/anonymous4377442462210879300webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12705)\r\n\tat \u003canonymous class\u003e.DelayedCommand.prototype.executeInternal_(file:///C:/Users/Karthik/AppData/Local/Temp/anonymous4377442462210879300webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12710)\r\n\tat \u003canonymous class\u003e.DelayedCommand.prototype.execute/\u003c(file:///C:/Users/Karthik/AppData/Local/Temp/anonymous4377442462210879300webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12652)\r\n",
+  "status": "failed"
 });
 formatter.after({
+  "duration": 141126,
   "status": "passed"
 });
 });
